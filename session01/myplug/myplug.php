@@ -30,7 +30,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 Copyright 2005-2015 Automattic, Inc.
 */
-
 defined( 'ABSPATH' ) or die( 'Hey, what are you doing here? You silly human!' );
 
 class AlecadddPlugin
@@ -51,13 +50,8 @@ class AlecadddPlugin
 		flush_rewrite_rules();
 	}
 
-	function uninstall() {
-		// delete CPT
-		// delete all the plugin data from the DB
-	}
-
 	function custom_post_type() {
-		register_post_type( 'book', array( 'public' => true, 'label' => 'Books' ) );
+		register_post_type( 'book', ['public' => true, 'label' => 'Books'] );
 	}
 }
 
@@ -70,5 +64,3 @@ register_activation_hook( __FILE__, array( $alecadddPlugin, 'activate' ) );
 
 // deactivation
 register_deactivation_hook( __FILE__, array( $alecadddPlugin, 'deactivate' ) );
-
-// uninstall
