@@ -30,7 +30,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 Copyright 2005-2015 Automattic, Inc.
 */
-defined( 'ABSPATH' ) or die( 'Warning!' );
+defined( 'ABSPATH' ) or die( 'sqbco Alert!' );
 
 class AlecadddPlugin
 {
@@ -51,7 +51,7 @@ class AlecadddPlugin
 	}
 
 	function custom_post_type() {
-		register_post_type( 'book', ['public' => true, 'label' => 'Books'] );
+		register_post_type( 'book', ['public' => true, 'label' => 'Device	'] );
 	}
 }
 
